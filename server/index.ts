@@ -1,24 +1,20 @@
-import express from "express";
-import cors from "cors";
-import { frontendUrl } from "./constants";
+import 'dotenv/config'
 
-import { createExpressMiddleware } from "@trpc/server/adapters/express";
-import indexRouter from "./routers";
+import express from 'express'
+import cors from "cors"
+import indexRouter from './src/routes/_index';
 
-import dotenv from "dotenv";
-dotenv.config();
+import { frontendUrl } from './config';
 
-const app = express();
-app.use(cors({ origin: frontendUrl }));
+const PORT = process.env.PORT || 3000
 
-app.use("/trpc", createExpressMiddleware({ router: indexRouter }));
+const app = express()
 
-app.get("/ping", (req, res) => {
-  res.send({ test: "successful" });
-});
+app.use(cors({origin : frontendUrl}));
+app.use(express.json())
 
-app.listen(7500, () => {
-  console.log("server listening", process);
-});
+app.use('/',indexRouter)
 
-export type AppRouter = typeof indexRouter;
+app.listen(PORT,()=>{
+    console.log(`server listening on port ${PORT}`)
+})
