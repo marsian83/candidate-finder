@@ -7,6 +7,10 @@ export default {
         mobile: { max: "780px" },
         widescreen: { min: "780px" },
       },
+      colors: {
+        primary: "#6bb0f4",
+        secondary: "#8ddfed",
+      },
     },
   },
   plugins: [],

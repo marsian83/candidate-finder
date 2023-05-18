@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-background text-front;
+  }
+}
+
+@layer utilities {
+  .p-page {
+    @apply px-[5vw];
+  }
+}
