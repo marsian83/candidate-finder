@@ -44,7 +44,7 @@ const navItems: navItem[] = [
 
 export default function Navbar() {
   return (
-    <nav className="p-page flex justify-between">
+    <nav className="p-page flex justify-between px-16 py-4 bg-[#2877cdd2]">
       <div>
         <img src="/logo.png" />
       </div>
@@ -57,9 +57,9 @@ export default function Navbar() {
                 <button className="flex items-center">
                   {item.title} <span className="material-icons">&#xe5cf;</span>
                 </button>
-                <ul className="absolute top-full pointer-events-none duration-300 group-hover:pointer-events-auto flex-col bg-cyan-300 opacity-0 group-hover:opacity-100">
+                <ul className="absolute top-full pointer-events-none duration-300 group-hover:pointer-events-auto flex-col bg-[#555252] text-white opacity-0 group-hover:opacity-100 mt-2 py-2 px-4 text-left">
                   {item.items.map((dropDownItem, index) => (
-                    <li>
+                    <li className="pb-2">
                       <Link
                         key={index}
                         className="whitespace-nowrap"
