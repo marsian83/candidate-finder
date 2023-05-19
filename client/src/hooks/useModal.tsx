@@ -11,11 +11,11 @@ export default function useModal() {
     setPopup(null);
   }
 
-  function element() {
+  function Element() {
     return (
       <>
         {popup && (
-          <div className="absolute top-0 left-0 w-full h-full bg-[#00000033] z-[1005] flex justify-center items-center">
+          <div className="fixed top-0 left-0 w-screen h-screen bg-[#00000033] z-[1005] flex justify-center items-center">
             {popup}
           </div>
         )}
@@ -23,5 +23,5 @@ export default function useModal() {
     );
   }
 
-  return { show, hide, element };
+  return { show, hide, Element };
 }

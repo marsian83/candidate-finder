@@ -14,7 +14,7 @@ interface globalContextType {
 const globalContext = createContext<globalContextType>({} as globalContextType);
 
 export function GlobalContextProvider({ children }: { children: ReactNode }) {
-  const [popup, setPopup] = useState<JSX.Element | null>(<></>);
+  const [popup, setPopup] = useState<JSX.Element | null>(null);
 
   const value = {
     popup,

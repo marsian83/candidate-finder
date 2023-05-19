@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useModal from "../hooks/useModal";
 
 interface navItem {
   title: string;
@@ -50,6 +51,8 @@ export default function Navbar() {
     setNavFixed(window.scrollY > 32);
   }
 
+  const modal = useModal();
+
   useEffect(() => {
     checkNavFixed();
     window.addEventListener("scroll", checkNavFixed);
@@ -93,6 +96,26 @@ export default function Navbar() {
             )}
           </li>
         ))}
+        <button
+          className="flex items-center gap-x-2 bg-brand px-4 py-2 rounded-lg border-2 border-brand duration-300 hover:bg-background hover:text-brand"
+          onClick={() => {
+            modal.show(
+              <div className="bg-white">
+                <h1>lasjdnajdj</h1>
+                <button
+                  onClick={() => {
+                    modal.hide();
+                  }}
+                >
+                  close
+                </button>
+              </div>
+            );
+          }}
+        >
+          <span className="material-icons">&#xea77;</span>
+          Login
+        </button>
       </ul>
     </nav>
   );

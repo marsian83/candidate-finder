@@ -12,6 +12,9 @@ export default function Hero() {
           Signup with our most advanced applicant tracking system with built in
           tools to help you filter out the best candidates for your job needs.
         </p>
+        <button className="bg-brand w-max px-8 py-3 text-xl rounded-full border-2 border-brand duration-300 hover:bg-background hover:text-brand">
+          Get Started
+        </button>
       </div>
       <div className="basis-1/2 flex flex-col justify-center">
         <img
