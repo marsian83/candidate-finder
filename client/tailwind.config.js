@@ -10,6 +10,19 @@ export default {
       colors: {
         primary: "#6bb0f4",
         secondary: "#8ddfed",
+        background: "#ffffff",
+        foreground: "#4a4a4a",
+        front: "#000000",
+        back: "#ffffff",
+      },
+      content: {
+        blank: "' '",
+      },
+      borderRadius: {
+        circle: "100%",
+      },
+      fontFamily: {
+        poppins: "poppins, sans-serif",
       },
     },
   },
