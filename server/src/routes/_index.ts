@@ -5,7 +5,11 @@ const router = express.Router();
 router.use("/test", testRouter);
 
 router.get("/", (req, res) => {
-  res.send(`Backend running successfully on ${req.baseUrl}`);
+  res.send(
+    `Backend running successfully on ${
+      req.protocol + "://" + req.get("host") + req.originalUrl
+    }`
+  );
 });
 
 export default router;
