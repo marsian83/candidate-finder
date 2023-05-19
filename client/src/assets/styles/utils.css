@@ -1,0 +1,7 @@
+.clip-path-hidden-top {
+  clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 0%);
+}
+
+.clip-path-visible {
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+}

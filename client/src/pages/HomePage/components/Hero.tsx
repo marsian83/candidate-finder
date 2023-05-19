@@ -6,9 +6,9 @@ export default function Hero() {
       after:content-blank after:top-0 after:right-0 after:rounded-circle after:h-[120%] after:w-[110%] after:z-[1] after:translate-x-1/2 after:-translate-y-1/2
       after:bg-gradient-to-r after:from-secondary after:to-primary flex"
     >
-      <div className="basis-1/2 text-back flex flex-col gap-y-2 justify-center">
-        <h1 className="text-back text-5xl">Looking for Talent ?</h1>
-        <p>
+      <div className="basis-1/2 text-back flex flex-col gap-y-4 justify-center">
+        <h1 className="text-back text-5xl font-medium">Looking for Talent ?</h1>
+        <p className="text-lg">
           Signup with our most advanced applicant tracking system with built in
           tools to help you filter out the best candidates for your job needs.
         </p>

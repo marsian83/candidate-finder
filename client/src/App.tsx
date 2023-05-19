@@ -8,6 +8,7 @@ import {
 import Footer from "./common/Footer";
 import Navbar from "./common/Navbar";
 import HomePage from "./pages/HomePage/HomePage";
+import { GlobalContextProvider } from "./contexts/globalContext";
 
 export default function App() {
   const router = createBrowserRouter(
@@ -19,7 +20,11 @@ export default function App() {
     )
   );
 
-  return <RouterProvider router={router} />;
+  return (
+    <GlobalContextProvider>
+      <RouterProvider router={router} />;
+    </GlobalContextProvider>
+  );
 }
 
 function Root() {

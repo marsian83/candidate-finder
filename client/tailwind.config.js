@@ -10,6 +10,7 @@ export default {
       colors: {
         primary: "#6bb0f4",
         secondary: "#8ddfed",
+        brand: "#f6916d",
         background: "#ffffff",
         foreground: "#4a4a4a",
         front: "#000000",
@@ -23,6 +24,9 @@ export default {
       },
       fontFamily: {
         poppins: "poppins, sans-serif",
+      },
+      transitionDuration: {
+        inherit: "inherit",
       },
     },
   },
