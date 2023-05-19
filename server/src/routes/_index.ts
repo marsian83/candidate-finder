@@ -1,7 +1,11 @@
-import express from "express"
-import testRouter from "./test"
-const router = express.Router()
+import express from "express";
+import testRouter from "./test";
+const router = express.Router();
 
-router.use('/test',testRouter)
+router.use("/test", testRouter);
 
-export default router
+router.get("/", (req, res) => {
+  res.send(`Backend running successfully on ${req.baseUrl}`);
+});
+
+export default router;
